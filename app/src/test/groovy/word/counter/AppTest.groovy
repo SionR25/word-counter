@@ -3,17 +3,8 @@
  */
 package word.counter
 
-import spock.lang.Specification
+import groovy.test.GroovyTestCase
 
-class AppTest extends Specification {
-    def "application has a greeting"() {
-        setup:
-        def app = new App()
+class AppTest extends GroovyTestCase {
 
-        when:
-        def result = app.greeting
-
-        then:
-        result != null
-    }
 }

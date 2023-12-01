@@ -4,11 +4,16 @@
 package word.counter
 
 class App {
-    String getGreeting() {
-        return 'Hello World!'
-    }
 
     static void main(String[] args) {
-        println new App().greeting
+        String pathToFile
+        if (!args) {
+            pathToFile = System.console().readLine 'Please provide path to file: '
+        } else if (args.length > 1) {
+            println "Please only supply one path"
+        } else {
+            pathToFile = args[0]
+        }
+        println pathToFile
     }
 }
