@@ -13,6 +13,8 @@ plugins {
     id 'application'
 }
 
+mainClassName = 'wordCounter.App'
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -28,7 +30,7 @@ dependencies {
     testImplementation libs.junit
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
-    testCompileOnly 'junit:junit:4.13'
+    testCompileOnly 'junit:junit:4.13.1'
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
@@ -42,14 +44,9 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'wordCounter.App'
+    mainClass = mainClassName
 }
 
-jar {
-    manifest {
-        attributes 'Main-Class': application.mainClass
-    }
-}
 
 tasks.named('test', Test) {
     useJUnitPlatform()
