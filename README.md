@@ -32,7 +32,7 @@ To extract this into a usable script, run:
 
 Now the file is extracted, you can run it straight from the command line:
 
-`./app/bin/app <./RELATIVE/PATH/TO/FILE.txt>`
+`./app/bin/app ./RELATIVE/PATH/TO/FILE.txt`
 
 This will then output the word count into the terminal
 
