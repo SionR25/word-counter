@@ -1,17 +1,14 @@
 # Word Counter
 
-Welcome to the word counter application. The purpose
-of this application is to take a relative path to
-a text file and return a map of the words that 
-appear in the file, and the number of times they
-occur, in descending order by number of occurrences.
+Welcome to the word counter application. The purpose of this application is to take a relative path to a text file and
+return a map of the words that appear in the file, and the number of times they occur, in descending order by number of
+occurrences.
 
 ## Testing the application
 
 Pre-requisites: Java 21, Groovy, and Gradle
 
-This application can be tested from the repo in the
-following way:
+This application can be tested from the repo in the following way:
 
 `./gradlew clean test`
 
@@ -19,8 +16,7 @@ following way:
 
 Pre-requisites: Java 21, Groovy, and Gradle
 
-The application can be built with the following
-command:
+The application can be built with the following command:
 
 `./gradlew clean build`
 
