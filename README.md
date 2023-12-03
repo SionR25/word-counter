@@ -24,8 +24,21 @@ command:
 
 `./gradlew clean build`
 
-This will output a jar file in
-`./app/build/libs/app.jar`
+## Extracting the CLI script
+
+The build will create a tar of the file at `app/build/distributions/app.tar`
+
+To extract this into a usable script, run:
+
+`tar xvf app/build/distributions/app.tar`
+
+## Execution the CLI script
+
+Now the file is extracted, you can run it straight from the command line:
+
+`./app/bin/app <./RELATIVE/PATH/TO/FILE.txt>`
+
+This will then output the word count into the terminal
 
 ### Notes
 
@@ -36,9 +49,12 @@ did mean I probably had to spend a bit longer than I would if I was already fami
 with it (especially getting the gradle build right).
 
 I made an assumption that it would be text files that it would be reading, so haven't
-tested with any other files. I also assumed that we would want to count numeric characters
-but not non alpha-numeric characters, so have included functionality to strip anything
-that isn't `A-Za-z0-9`
+tested with any other files. I also assumed that we would want to count alpha & numeric 
+characters but not non alpha-numeric characters, so have included functionality to strip
+anything that isn't `A-Za-z0-9`
+
+I also made an assumption that as it was a CLI application, the person running it would
+have some technical knowledge and would understand the terms filepath and relative filepath.
 
 I decided to do more functional programming than OOP. Because the case was quite defined
 and limited to one function, I though classes would be too much. If there were future 
