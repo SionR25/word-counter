@@ -64,7 +64,20 @@ class AppTest extends GroovyTestCase {
         App.main()
 
         // Assert
-        String expected = "To many args supplied, please re-run with only one filepath supplied"
+        String expected = "Too many args supplied, please re-run with only one filepath supplied"
+        assert buffer.toString() == expected
+    }
+
+    void testReturnsMessageFileNotExist() {
+        // Capture system out
+        def buffer = new ByteArrayOutputStream()
+        System.out = new PrintStream(buffer)
+
+        // Act
+        App.main()
+
+        // Assert
+        String expected = "Supplied filepath cannot be found, please ensure you are giving relative filepath"
         assert buffer.toString() == expected
     }
 }
