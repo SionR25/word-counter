@@ -13,6 +13,8 @@ plugins {
     id 'application'
 }
 
+mainClassName = 'wordCounter.App'
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -25,10 +27,11 @@ dependencies {
     // This dependency is used by the application.
     implementation libs.guava
 
-    // Use the awesome Spock testing and specification framework even with Java
-    testImplementation libs.spock.core
     testImplementation libs.junit
 
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
+    testCompileOnly 'junit:junit:4.13.1'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
@@ -41,10 +44,16 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'word.counter.App'
+    mainClass = mainClassName
 }
 
-tasks.named('test') {
-    // Use JUnit Platform for unit tests.
+
+tasks.named('test', Test) {
     useJUnitPlatform()
+
+    maxHeapSize = '1G'
+
+    testLogging {
+        events "passed"
+    }
 }

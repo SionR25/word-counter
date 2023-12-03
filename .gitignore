@@ -6,3 +6,6 @@ build
 
 #Ignore other directories/files
 .vscode
+.idea
+app/bin
+app/lib
