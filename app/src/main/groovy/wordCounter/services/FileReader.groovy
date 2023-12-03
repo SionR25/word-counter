@@ -9,7 +9,6 @@ static String readFileToString(String pathToFile) throws NoFileException {
         File textFile = new File(currentDir + "/" + pathToFile)
         return textFile.text
     } catch (FileNotFoundException exception) {
-        println(exception.message)
         throw new NoFileException("${pathToFile} cannot be found", "WC.NF.1")
     }
 }

@@ -77,7 +77,7 @@ class AppTest extends GroovyTestCase {
         App.main("./file/not/exist.txt")
 
         // Assert
-        String expected = "Supplied filepath cannot be found, please ensure you are giving relative filepath"
+        String expected = "./file/not/exist.txt cannot be found, please ensure you are giving relative filepath"
         assert buffer.toString() == expected
     }
 }
