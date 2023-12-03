@@ -1,8 +1,8 @@
 # Word Counter
 
-Welcome to the word counter application. The purpose of this application is to take a relative path to a text file and
-return a map of the words that appear in the file, and the number of times they occur, in descending order by number of
-occurrences.
+Welcome to the word counter application. The purpose of this application is to take a 
+relative path to a text file and return a map of the words that appear in the file, and
+the number of times they occur, in descending order by number of occurrences.
 
 ## Testing the application
 
