@@ -21,6 +21,14 @@ class WordCounterTest extends GroovyTestCase {
         assert result == (expected)
     }
 
+    void testStripsNonAlphaNumericCharacters() {
+        def result = countWords("How! to test? how to, how. 1")
+
+        Map<String,Integer> expected = [how: 3, to: 2, test: 1, '1': 1]
+
+        assert result == (expected)
+    }
+
     void testReturnsCountOfOneWordString() {
         def result = countWords("Test")
 
