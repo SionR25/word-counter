@@ -10,7 +10,7 @@ static Map<String,Integer> countWords(String string) {
     HashMap<String,Integer> wordCount = [:]
     // Iterate through words and add count to HashMap
     for (word in wordList) {
-        word = word.toLowerCase()
+        word = word.toLowerCase().replaceAll("[^a-zA-Z0-9]", "")
         if (wordCount.containsKey(word)) {
             wordCount[word] = wordCount[word] + 1
         } else {

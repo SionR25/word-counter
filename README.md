@@ -36,7 +36,9 @@ did mean I probably had to spend a bit longer than I would if I was already fami
 with it (especially getting the gradle build right).
 
 I made an assumption that it would be text files that it would be reading, so haven't
-tested with any other files.
+tested with any other files. I also assumed that we would want to count numeric characters
+but not non alpha-numeric characters, so have included functionality to strip anything
+that isn't `A-Za-z0-9`
 
 I decided to do more functional programming than OOP. Because the case was quite defined
 and limited to one function, I though classes would be too much. If there were future 
@@ -44,4 +46,4 @@ requirements to maybe interact with the file or the word map, I would look to re
 to classes and include class methods for the interaction with the file/word map.
 
 Apologies if the commits look a bit scattered, I was just grabbing bits of the day as
-and when I could.
+and when I could - it was Christmas decoration weekend!
